@@ -1,0 +1,30 @@
+5) Você está em uma sala com três interruptores, cada um conectado a uma lâmpada em salas diferentes.
+ Você não pode ver as lâmpadas da sala em que está, mas pode ligar e desligar os interruptores quantas vezes quiser.
+ Seu objetivo é descobrir qual interruptor controla qual lâmpada. Como você faria para descobrir, usando
+  apenas duas idas até uma das salas das lâmpadas, qual interruptor controla cada lâmpada?
+
+  Interruptores:
+  I1
+  I2
+  I3
+  Lampadas das salas:
+  S1
+  S2
+  S3
+
+Acionar I1 e esperar alguns minutos para a lampada aquecer.
+Acionar I2 e ir imediatamente para S1.
+    Se S1 estiver acesa, então I2 pertence à sala S1.
+        Volte e acione novamente I1 e vá para S2.
+            Se S2 estiver acesa, então I1 pertence à S2 e I3 pertence à S3.
+            Se S2 não estiver acesa, então I1 pertence à S3 e I3 pertence à S2.
+
+    Se S1 não estiver acesa e a lampada estiver quente, I1 pertence a sala S1.
+        Vá para S2.
+            Se S2 estiver acesa, então I2 pertence à S2 e I3 pertence à S3.
+            Se S2 não estiver acesa, então I3 pertence à S1 e S3 pertence à S2.
+
+    Se S1 não estiver acesa e a lâmpada estiver fria, I3 pertence a sala S1.
+        Vá para a sala S2.
+            Se S2 estiver acesa, I2 pertence à S2 e I1 pertence à S3.
+            Se S2 não estiver acesa, I2 pertence a S3 e I1 a S1.
